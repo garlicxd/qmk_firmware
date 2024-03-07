@@ -20,4 +20,4 @@
 #define ENABLE_RGB_MATRIX_BREATHING
 #define RGB_MATRIX_DEFAULT_HUE 20   // Sets the default hue value, if none has been set
 #define RGB_MATRIX_DEFAULT_SAT 80   // Sets the default saturation value, if none has been set
-#define RGB_MATRIX_DEFAULT_VAL 10   // Sets the default brightness value, if none has been set
+#define RGB_MATRIX_DEFAULT_VAL 100  // Sets the default brightness value, if none has been set
