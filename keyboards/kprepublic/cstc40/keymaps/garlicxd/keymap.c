@@ -42,11 +42,11 @@ enum combo_events {
   JUMP_UP,
   JUMP_DOWN,
 };
-const uint16_t PROGMEM ctrl_up[] = {KC_LCTL, KC_UP, COMBO_END};
-const uint16_t PROGMEM ctrl_down[] = {KC_LCTL, KC_DOWN, COMBO_END};
+const uint16_t PROGMEM ctrl_up[]    = {KC_LCTL, KC_UP, COMBO_END};
+const uint16_t PROGMEM ctrl_down[]  = {KC_LCTL, KC_DOWN, COMBO_END};
 combo_t key_combos[] = {
-  [JUMP_UP] = COMBO_ACTION(ctrl_up),
-  [JUMP_DOWN] = COMBO_ACTION(ctrl_down),
+  [JUMP_UP]     = COMBO_ACTION(ctrl_up),
+  [JUMP_DOWN]   = COMBO_ACTION(ctrl_down),
 };
 
 // unicode
@@ -81,62 +81,69 @@ enum unicode_names {
     CUUUU
 };
 const uint32_t PROGMEM unicode_map[] = {
-    [SS] = 0x00DF, // ß
-    [AA] = 0x00E1, // á
-    [AAA] = 0x00E4, // ä
-    [AAAA] = 0x00E5, // å
-    [AE] = 0x00E6, // æ
-    [EE] = 0x00E9, // é
-    [II] = 0x00ED, // í
-    [OO] = 0x00F3, // ó
-    [OOO] = 0x00F6, // ö
-    [OOOO] = 0x0151, // ő
-    [OOOOO] = 0x00F8, // ø
-    [UU] = 0x00FA, // ú
-    [UUU] = 0x00FC, // ü
-    [UUUU] = 0x0171, // ű
-    [CSS] = 0x1E9E, // ẞ
-    [CAA] = 0x00C1, // Á
-    [CAAA] = 0x00C4, // Ä
-    [CAAAA] = 0x00C5, // Å
-    [CAE] = 0x00C6, // Æ
-    [CEE] = 0x00C9, // É
-    [CII] = 0x00CD, // Í
-    [COO] = 0x00D3, // Ó
-    [COOO] = 0x00D6, // Ö
-    [COOOO] = 0x0150, // Ő
-    [COOOOO] = 0x00D8, // Ø
-    [CUU] = 0x00DA, // Ú
-    [CUUU] = 0x00DC, // Ü
-    [CUUUU] = 0x0170, // Ű
+    [SS]        = 0x00DF, // ß
+    [AA]        = 0x00E1, // á
+    [AAA]       = 0x00E4, // ä
+    [AAAA]      = 0x00E5, // å
+    [AE]        = 0x00E6, // æ
+    [EE]        = 0x00E9, // é
+    [II]        = 0x00ED, // í
+    [OO]        = 0x00F3, // ó
+    [OOO]       = 0x00F6, // ö
+    [OOOO]      = 0x0151, // ő
+    [OOOOO]     = 0x00F8, // ø
+    [UU]        = 0x00FA, // ú
+    [UUU]       = 0x00FC, // ü
+    [UUUU]      = 0x0171, // ű
+    [CSS]       = 0x1E9E, // ẞ
+    [CAA]       = 0x00C1, // Á
+    [CAAA]      = 0x00C4, // Ä
+    [CAAAA]     = 0x00C5, // Å
+    [CAE]       = 0x00C6, // Æ
+    [CEE]       = 0x00C9, // É
+    [CII]       = 0x00CD, // Í
+    [COO]       = 0x00D3, // Ó
+    [COOO]      = 0x00D6, // Ö
+    [COOOO]     = 0x0150, // Ő
+    [COOOOO]    = 0x00D8, // Ø
+    [CUU]       = 0x00DA, // Ú
+    [CUUU]      = 0x00DC, // Ü
+    [CUUUU]     = 0x0170, // Ű
 };
 
-#define U_SS UP(SS, CSS)
-#define U_A1 UP(AA, CAA)
-#define U_A2 UP(AAA, CAAA)
-#define U_A3 UP(AAAA, CAAAA)
-#define U_AE UP(AE, CAE)
-#define U_E1 UP(EE, CEE)
-#define U_I1 UP(II, CII)
-#define U_O1 UP(OO, COO)
-#define U_O2 UP(OOO, COOO)
-#define U_O3 UP(OOOO, COOOO)
-#define U_O4 UP(OOOOO, COOOOO)
-#define U_U1 UP(UU, CUU)
-#define U_U2 UP(UUU, CUUU)
-#define U_U3 UP(UUUU, CUUUU)
+#define U_SS UP(SS,     CSS)
+#define U_A1 UP(AA,     CAA)
+#define U_A2 UP(AAA,    CAAA)
+#define U_A3 UP(AAAA,   CAAAA)
+#define U_AE UP(AE,     CAE)
+#define U_E1 UP(EE,     CEE)
+#define U_I1 UP(II,     CII)
+#define U_O1 UP(OO,     COO)
+#define U_O2 UP(OOO,    COOO)
+#define U_O3 UP(OOOO,   COOOO)
+#define U_O4 UP(OOOOO,  COOOOO)
+#define U_U1 UP(UU,     CUU)
+#define U_U2 UP(UUU,    CUUU)
+#define U_U3 UP(UUUU,   CUUUU)
 
 // default layer keys
-#define TAB_SYM LT(_FUNCTION, KC_TAB)
-#define KCR_NAV LT(_NAVIGATION, KC_R)
-#define ENT_CAP LT(_DEFAULT_CAPS, KC_ENT)
-#define BSP_MOU LT(_MOUSE, KC_BSPC)
-#define SPC_SYM LT(_SYMBOLS, KC_SPC)
-#define DEL_SPE LT(_SPECIAL, KC_DEL)
+#define T_1 KC_TAB
+#define T_2 KC_R
+#define T_3 KC_ENT
+#define T_4 KC_BSPC
+#define T_5 KC_SPC
+#define T_6 KC_DEL
+#define LT_1 LT(_FUNCTION,      T_1)
+#define LT_2 LT(_NAVIGATION,    T_2)
+#define LT_3 LT(_SPECIAL,       T_3)
+#define LT_4 LT(_DEFAULT_CAPS,  T_4)
+#define LT_5 LT(_SYMBOLS,       T_5)
+#define LT_6 LT(_MOUSE,         T_6)
 
 // additional layer keys
 #define SCL_NAV LT(_NAVIGATION, KC_SCLN)
 #define ENT_SCA LT(_SPECIAL_CAPS, KC_ENT)
+#define BSP_SCA LT(_SPECIAL_CAPS, KC_BSPC)
 
 #define L_DEF TO(_DEFAULT)
 #define L_QWE TO(_QWERTY)
@@ -243,19 +250,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_F,   KC_B,   KC_K,   KC_L,   KC_J,   SLOT_5, SLOT_6, KC_Z,   KC_W,   KC_DQUO,KC_COMM,KC_DOT,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_PSCR,KC_LGUI,TAB_SYM,KCR_NAV,ENT_CAP,    _______,    BSP_MOU,SPC_SYM,DEL_SPE,KC_ESC, _______
+    KC_PSCR,KC_LGUI,LT_1,   LT_2,   LT_3,       _______,    LT_4,   LT_5,   LT_6,   KC_ESC, _______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
 [_DEFAULT_CAPS] = LAYOUT_planck_mit(
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    S(KC_X),S(KC_P),S(KC_D),S(KC_M),S(KC_Q),_______,_______,KC_HASH,S(KC_Y),S(KC_O),S(KC_U),KC_AT,
+    S(KC_X),S(KC_P),S(KC_D),S(KC_M),S(KC_Q),_______,_______,KC_AT,  S(KC_Y),S(KC_O),S(KC_U),KC_HASH,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     S(KC_S),S(KC_N),S(KC_T),S(KC_H),S(KC_V),_______,_______,S(KC_G),S(KC_C),S(KC_A),S(KC_E),S(KC_I),
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     S(KC_F),S(KC_B),S(KC_K),S(KC_L),S(KC_J),_______,_______,S(KC_Z),S(KC_W),KC_BSLS,KC_GRV, KC_TILD,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,KC_UNDS,S(KC_R),KC_MINS,     LLOCK,     KC_BSPC, KC_SPC, KC_DEL, _______,_______
+    _______,_______,KC_UNDS,S(KC_R),KC_MINS,     LLOCK,     LT_4,   LT_5,   LT_6,   _______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
@@ -267,7 +274,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_MINS,KC_PLUS,KC_CIRC,KC_COLN,KC_ASTR,_______,_______,KC_PIPE,KC_RPRN,KC_RCBR,KC_RBRC,KC_GT,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,KC_DOT, SCL_NAV,KC_COMM,     LLOCK,     _______,_______,_______,_______,_______
+    _______,_______,KC_DOT, LT_2,   KC_COMM,     LLOCK,     LT_4,   LT_5,   LT_6,   _______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
@@ -279,7 +286,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     C(KC_Z),C(KC_C),C(KC_X),C(KC_V),C(KC_Y),_______,_______,_______,_______,_______,_______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,_______,      LLOCK,    KC_BSPC,KC_SPC, KC_DEL, _______,_______
+    _______,_______,LT_1,   LT_2,   LT_3,        LLOCK,    KC_BSPC,KC_SPC, KC_DEL, _______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
@@ -291,7 +298,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_F9,  KC_F10, KC_F11, KC_F12, _______,_______,_______,_______,_______,_______,_______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,_______,     LLOCK,     _______,_______,_______,_______,_______
+    _______,_______,LT_1,   LT_2,   LT_3,        LLOCK,     LT_4,   LT_5,   LT_6,   _______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
@@ -303,7 +310,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,_______,_______,_______,_______,_______,_______,U_U3,   U_U2,   U_U1,   _______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,ENT_SCA,     LLOCK,     KC_BSPC,KC_SPC, KC_DEL, _______,_______
+    _______,_______,LT_1,   LT_2,   LT_3,        LLOCK,     BSP_SCA,LT_5,   LT_6,   _______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
@@ -315,7 +322,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,_______,_______,_______,_______,_______,_______,S(U_U3),S(U_U2),S(U_U1),_______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,ENT_SCA,     LLOCK,     KC_BSPC,KC_SPC, KC_DEL, _______,_______
+    _______,_______,LT_1,   LT_2,   LT_3,        LLOCK,     LT_4,   LT_5,   LT_6,   _______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
@@ -351,7 +358,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_F,   KC_B,   KC_K,   KC_L,   KC_J,   SLOT_5, SLOT_6, KC_Z,   KC_W,   KC_DQUO,KC_COMM,KC_DOT,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,KC_LGUI,TAB_SYM,KCR_NAV,ENTnLEA,     L_DEF,     BSP_MOU,SPC_SYM,DEL_SPE,KC_ESC, _______
+    _______,KC_LGUI,LT_1,   LT_2,   ENTnLEA,     L_DEF,     LT_4,   LT_5,   LT_6,   KC_ESC, _______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
