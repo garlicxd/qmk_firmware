@@ -15,12 +15,12 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 | F    | B   | K   | L   | J   |     |     | Z   | W   | "   | ,   | .   |
 | PScr | GUI | TAB | R   | ENT |     |     | BSP | SPC | DEL | ESC |     |
 |      |     |     |     |     |     |     |     |     |     |     |     |
-|      |     | FUN | NAV | CAP |     |     | MOU | SYM | SPE |     |     |
+|      |     | FUN | NAV | SPE |     |     | CAP | SYM | MOU |     |     |
 
 #### Default Caps Layer
 |     |     |     |     |     | x   | x   |     |     |     |     |     |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| X   | P   | D   | M   | Q   |     |     | #   | Y   | O   | U   | @   | 
+| X   | P   | D   | M   | Q   |     |     | @   | Y   | O   | U   | #   | 
 | S   | N   | T   | H   | V   |     |     | G   | C   | A   | E   | I   |
 | F   | B   | K   | L   | J   |     |     | Z   | W   | \\  | \`  | ~   |
 |     |     | _   | R   | -   |     | x   | BSP | SPC | DE  |     |     |
