@@ -34,7 +34,8 @@ enum custom_keycodes {
     LLOCK = SAFE_RANGE,
     CHAT,
     ACHAT,
-    ENTnLEA
+    ENTnLEA,
+    PING,
 };
 
 // combos
@@ -186,6 +187,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (record->event.pressed) {
             // rgb_matrix_set_color_all(0xFF,  0xFF, 0xFF);
         }
+        return false;   
+
+    case PING:
+        if (record->event.pressed) {
+            tap_code(KC_G);
+            tap_code16(KC_MS_BTN1);
+        }
         return false;
 
     default:
@@ -274,7 +282,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_MINS,KC_PLUS,KC_CIRC,KC_COLN,KC_ASTR,_______,_______,KC_PIPE,KC_RPRN,KC_RCBR,KC_RBRC,KC_GT,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,KC_DOT, LT_2,   KC_COMM,     LLOCK,     LT_4,   LT_5,   LT_6,   _______,_______
+    _______,_______,KC_DOT, KC_SCLN,KC_COMM,     LLOCK,     LT_4,   LT_5,   LT_6,   _______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
@@ -346,7 +354,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_6,   KC_7,   KC_D,   KC_F,   KC_LSFT,_______,_______,_______,_______,_______,_______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_F12, _______,KC_TAB, KC_SPC, CHAT,       L_DEF,     _______,_______,_______,_______,_______
+    KC_F12, KC_LALT,KC_TAB, KC_SPC, CHAT,       L_DEF,     _______,_______,_______,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
