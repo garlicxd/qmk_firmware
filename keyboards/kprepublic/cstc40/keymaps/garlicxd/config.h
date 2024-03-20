@@ -11,6 +11,8 @@
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define QUICK_TAP_TERM 0
 
+#define COMBO_SHOULD_TRIGGER
+
 // Layer Lock feature timeout
 #define LAYER_LOCK_IDLE_TIMEOUT 60000
 
