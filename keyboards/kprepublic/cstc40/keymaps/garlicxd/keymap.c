@@ -112,20 +112,51 @@ const uint32_t PROGMEM unicode_map[] = {
     [CUUUU]     = 0x0170, // Ű
 };
 
-#define U_SS UP(SS,     CSS)
-#define U_A1 UP(AA,     CAA)
-#define U_A2 UP(AAA,    CAAA)
-#define U_A3 UP(AAAA,   CAAAA)
-#define U_AE UP(AE,     CAE)
-#define U_E1 UP(EE,     CEE)
-#define U_I1 UP(II,     CII)
-#define U_O1 UP(OO,     COO)
-#define U_O2 UP(OOO,    COOO)
-#define U_O3 UP(OOOO,   COOOO)
-#define U_O4 UP(OOOOO,  COOOOO)
-#define U_U1 UP(UU,     CUU)
-#define U_U2 UP(UUU,    CUUU)
-#define U_U3 UP(UUUU,   CUUUU)
+// #define U_SS UP(SS,     CSS)
+// #define U_A1 UP(AA,     CAA)
+// #define U_A2 UP(AAA,    CAAA)
+// #define U_A3 UP(AAAA,   CAAAA)
+// #define U_AE UP(AE,     CAE)
+// #define U_E1 UP(EE,     CEE)
+// #define U_I1 UP(II,     CII)
+// #define U_O1 UP(OO,     COO)
+// #define U_O2 UP(OOO,    COOO)
+// #define U_O3 UP(OOOO,   COOOO)
+// #define U_O4 UP(OOOOO,  COOOOO)
+// #define U_U1 UP(UU,     CUU)
+// #define U_U2 UP(UUU,    CUUU)
+// #define U_U3 UP(UUUU,   CUUUU)
+
+#define U_SS UM(SS)
+#define U_A1 UM(AA)
+#define U_A2 UM(AAA)
+#define U_A3 UM(AAAA)
+#define U_AE UM(AE)
+#define U_E1 UM(EE)
+#define U_I1 UM(II)
+#define U_O1 UM(OO)
+#define U_O2 UM(OOO)
+#define U_O3 UM(OOOO)
+#define U_O4 UM(OOOOO)
+#define U_U1 UM(UU)
+#define U_U2 UM(UUU)
+#define U_U3 UM(UUUU)
+
+// caps unicode layer keys
+#define U_CSS UM(CSS)
+#define U_CA1 UM(CAA)
+#define U_CA2 UM(CAAA)
+#define U_CA3 UM(CAAAA)
+#define U_CAE UM(CAE)
+#define U_CE1 UM(CEE)
+#define U_CI1 UM(CII)
+#define U_CO1 UM(COO)
+#define U_CO2 UM(COOO)
+#define U_CO3 UM(COOOO)
+#define U_CO4 UM(COOOOO)
+#define U_CU1 UM(CUU)
+#define U_CU2 UM(CUUU)
+#define U_CU3 UM(CUUUU)
 
 // default layer keys
 #define T_1 KC_TAB
@@ -143,8 +174,7 @@ const uint32_t PROGMEM unicode_map[] = {
 
 // additional layer keys
 #define SCL_NAV LT(_NAVIGATION, KC_SCLN)
-#define ENT_SCA LT(_SPECIAL_CAPS, KC_ENT)
-#define BSP_SCA LT(_SPECIAL_CAPS, KC_BSPC)
+#define LT_SCA LT(_SPECIAL_CAPS, T_4)
 
 #define L_DEF TO(_DEFAULT)
 #define L_QWE TO(_QWERTY)
@@ -160,6 +190,9 @@ const uint32_t PROGMEM unicode_map[] = {
 #define SLOT_6 _______
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+
+    // Layer Lock
+    if (!process_layer_lock(keycode, record, LLOCK)) { return false; }
 
     switch (keycode) {
     case CHAT:
@@ -199,10 +232,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     default:
         return true; // Process all other keycodes normally
     }
-
-    // Layer Lock
-    if (!process_layer_lock(keycode, record, LLOCK)) { return false; }
-    
     return true;
 }
 
@@ -258,7 +287,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_F,   KC_B,   KC_K,   KC_L,   KC_J,   SLOT_5, SLOT_6, KC_Z,   KC_W,   KC_DQUO,KC_COMM,KC_DOT,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_PSCR,KC_LGUI,LT_1,   LT_2,   LT_3,       _______,    LT_4,   LT_5,   LT_6,   KC_ESC, _______
+    KC_ESC, KC_LCTL,LT_1,   LT_2,   LT_3,       _______,    LT_4,   LT_5,   LT_6,   KC_LGUI,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
@@ -302,7 +331,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_F1,  KC_F2,  KC_F3,  KC_F4,  _______,_______,_______,_______,_______,RGB_TOG,QK_RBT, QK_BOOT,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_F5,  KC_F6,  KC_F7,  KC_F8,  _______,_______,_______,_______,_______,_______,_______,_______,
+    KC_F5,  KC_F6,  KC_F7,  KC_F8,  KC_PSCR,_______,_______,_______,_______,_______,_______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_F9,  KC_F10, KC_F11, KC_F12, _______,_______,_______,_______,_______,_______,_______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
@@ -318,17 +347,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,_______,_______,_______,_______,_______,_______,U_U3,   U_U2,   U_U1,   _______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,LT_1,   LT_2,   LT_3,        LLOCK,     BSP_SCA,LT_5,   LT_6,   _______,_______
+    _______,_______,LT_1,   LT_2,   LT_3,        LLOCK,     LT_SCA, LT_5,   LT_6,   _______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
 [_SPECIAL_CAPS] = LAYOUT_planck_mit(
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,_______,_______,_______,S(U_O3),S(U_O2),S(U_O1),S(U_O4),S(U_SS),
+    _______,_______,_______,_______,_______,_______,_______,U_CO3,  U_CO2,  U_CO1,  U_CO4,  U_CSS,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,_______,_______,_______,S(U_A3),S(U_A2),S(U_A1),S(U_E1),S(U_I1),
+    _______,_______,_______,_______,_______,_______,_______,U_CA3,  U_CA2,  U_CA1,  U_CE1,  U_CI1,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,_______,_______,_______,S(U_U3),S(U_U2),S(U_U1),_______,_______,
+    _______,_______,_______,_______,_______,_______,_______,U_CU3,  U_CU2,  U_CU1,  _______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,_______,LT_1,   LT_2,   LT_3,        LLOCK,     LT_4,   LT_5,   LT_6,   _______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
@@ -350,7 +379,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_1,   KC_2,   KC_3,   KC_4,   KC_5,   _______,_______,_______,_______,_______,_______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_Q,   KC_W,   KC_E,   KC_R,   KC_LCTL,_______,_______,KC_ENT, _______,_______,_______,_______,
+    KC_Q,   KC_W,   KC_E,   KC_R,   KC_LCTL,_______,_______,KC_ENT, KC_ESC, _______,_______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_6,   KC_7,   KC_D,   KC_F,   KC_LSFT,_______,_______,_______,_______,_______,_______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
@@ -366,7 +395,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_F,   KC_B,   KC_K,   KC_L,   KC_J,   SLOT_5, SLOT_6, KC_Z,   KC_W,   KC_DQUO,KC_COMM,KC_DOT,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,KC_LGUI,LT_1,   LT_2,   ENTnLEA,     L_DEF,     LT_4,   LT_5,   LT_6,   KC_ESC, _______
+    _______,_______,LT_1,   LT_2,   ENTnLEA,     L_DEF,     LT_4,   LT_5,   LT_6,   _______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
