@@ -43,28 +43,28 @@ enum custom_keycodes {
 enum combo_events {
   JUMP_UP,
   JUMP_DOWN,
-  C_ATAB,
+  // C_ATAB,
 };
 const uint16_t PROGMEM ctrl_up[]    = {KC_LCTL, KC_UP, COMBO_END};
 const uint16_t PROGMEM ctrl_down[]  = {KC_LCTL, KC_DOWN, COMBO_END};
-const uint16_t PROGMEM spc_two[]  = {KC_SPC, KC_2, COMBO_END};
+// const uint16_t PROGMEM spc_two[]  = {KC_SPC, KC_2, COMBO_END};
 combo_t key_combos[] = {
   [JUMP_UP]     = COMBO_ACTION(ctrl_up),
   [JUMP_DOWN]   = COMBO_ACTION(ctrl_down),
-  [C_ATAB]      = COMBO_ACTION(spc_two),
+  // [C_ATAB]      = COMBO_ACTION(spc_two),
 };
 
-bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode, keyrecord_t *record) {
-    /* Disable combo on layer */
-    switch (combo_index) {
-        case C_ATAB:
-            if (!layer_state_is(_LEAGUE)) {
-                return false;
-            }
-    }
+// bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode, keyrecord_t *record) {
+//     /* Disable combo on layer */
+//     switch (combo_index) {
+//         case C_ATAB:
+//             if (!layer_state_is(_LEAGUE)) {
+//                 return false;
+//             }
+//     }
 
-    return true;
-}
+//     return true;
+// }
 
 // unicode
 enum unicode_names {
@@ -230,6 +230,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         return false; // Skip all further processing of this key
 
+    case CHATALT:
+        if (record->event.pressed) {
+            tap_code(KC_ENT);
+            layer_move(_CHAT);
+        }
+        return false; // Skip all further processing of this key 
+
     case ENTnLEA:
         if (record->event.pressed) {
             tap_code(KC_ENT);
@@ -243,9 +250,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             tap_code16(KC_MS_BTN1);
         }
         return false;
-
-    default:
-        return true; // Process all other keycodes normally
     }
     return true;
 }
@@ -271,11 +275,11 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
         // tap_code(KC_DOWN);
         // tap_code(KC_DOWN);
       }
-      case C_ATAB:
-      if (pressed) {
-        tap_code16(A_TAB);
-      }
-      break;
+    // case C_ATAB:
+    //   if (pressed) {
+    //     tap_code16(A_TAB);
+    //   }
+    //   break;
   }
 }
 
