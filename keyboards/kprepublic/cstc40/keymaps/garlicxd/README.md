@@ -20,7 +20,7 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 | --- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | --- | --- |
 | X   | P    | D    | M    | Q    | qwer | leag | &    | Y    | O    | U   | '   |
 | S   | N    | T    | H    | V    |      |      | G    | C    | A    | E   | I   |
-| F   | B    | K    | L    | J    |      |      | Z    | W    | "    | .   | ,   |
+| F   | B    | K    | L    | J    |      |      | Z    | W    | "    | ,   | .   |
 |     | Esc  | Tab  | R    | Ent  |      |      | Bspc | Spc  | Del  | Gui |     |
 |     |      |      |      |      |      |      |      |      |      |     |     |
 |     | LFun | LMac | LNav | LSpe |      |      | LCap | LSym | LMou |     |     |
