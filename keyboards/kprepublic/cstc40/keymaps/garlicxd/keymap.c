@@ -200,7 +200,6 @@ const uint32_t PROGMEM unicode_map[] = {
 #define A_TAB A(KC_TAB)
 #define C_TAB C(KC_TAB)
 
-#define CHATALT LALT_T(CHAT)
 #define REC KC_F13
 
 #define SLOT_1 TO(_QWERTY)
@@ -229,13 +228,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             layer_move(_CHAT);
         }
         return false; // Skip all further processing of this key
-
-    case CHATALT:
-        if (record->event.pressed) {
-            tap_code(KC_ENT);
-            layer_move(_CHAT);
-        }
-        return false; // Skip all further processing of this key 
 
     case ENTnLEA:
         if (record->event.pressed) {
@@ -418,7 +410,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_6,   KC_7,   KC_D,   KC_F,   KC_LSFT,_______,_______,_______,_______,_______,_______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_F12, REC,    KC_TAB, KC_SPC, CHATALT,     L_DEF,     _______,_______,_______,_______,_______
+    KC_F12, REC,    KC_TAB, KC_SPC, CHAT,        L_DEF,     _______,_______,_______,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
