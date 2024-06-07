@@ -1,9 +1,11 @@
 ---
-cssclass: keyboard-table
+cssclasses:
+  - github-markdown
 ---
 
 ## [monkeytype](https://monkeytype.com/)
 
+https://github.com/garlicxd/qmk_firmware/tree/master/keyboards/kprepublic/cstc40/keymaps/garlicxd
 
 ## Specs
 
@@ -19,12 +21,12 @@ Keycaps: XDA
 #### Default Layer
 SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 
-| ----- | -----    | -----    | -----  | -----    | ----- | ----- | -----     | -----    | -----    | ----- | ----- |
-| ----- | -------- | -------- | ------ | -------- | ----- | ----- | --------- | -------- | -------- | ----- | ----- |
-| X     | P        | D        | M      | Q        | qwer  | leag  | &         | Y        | O        | U     | '     |
-| S     | N        | T        | H      | V        | dj    |       | G         | C        | A        | E     | I     |
-| F     | B        | K        | L      | J        |       |       | Z         | W        | "        | .     | ,     |
-|       | Esc func | Tab macr | R navi | Ent spec |       |       | Bspc caps | Spc symb | Del mous | Gui   |       |
+|     |          |          |          |          |      |      |           |        |          |     |     |
+| --- | -------- | -------- | -------- | -------- | ---- | ---- | --------- | ------ | -------- | --- | --- |
+| X   | P        | D        | M        | Q        | qwer | leag | &         | Y      | O        | U   | '   |
+| S   | N        | T        | H        | V        | dj   |      | G         | C      | A        | E   | I   |
+| F   | B        | K        | L        | J        |      |      | Z         | W      | "        | .   | ,   |
+|     | Esc func | Tab macr | Spc navi | Ent caps |      |      | Bspc spec | R symb | Del mous | Gui |     |
 
 #### Default Caps Layer
 |     |     |     |     |     |     |     |     |     |     |     |     |
@@ -32,7 +34,7 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 | X   | P   | D   | M   | Q   |     |     | $   | Y   | O   | U   | \`  |
 | S   | N   | T   | H   | V   |     |     | G   | C   | A   | E   | I   |
 | F   | B   | K   | L   | J   |     |     | Z   | W   | #   | @   | ~   |
-|     |     | _   | R   | -   |     |     |     |     |     |     |     |
+|     |     |     |     |     |     |     | -   | R   | _   |     |     |
 
      
 
@@ -42,7 +44,7 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 | 1   | 2   | 3   | 4   | %   |     |     | ^   | 6   | 7   | 8   | 9   |
 | <   | [   | {   | (   | 5   |     |     | 0   | ;   | :   | !   | ?   |
 | +   | -   | *   | /   | \\  |     |     | \|  | )   | }   | ]   | >   |
-|     |     | .   | =   | ,   |     |     |     |     |     |     |     |
+|     |     |     |     |     |     |     | ,   | =   | .   |     |     |
 
 #### Nav Layer
 |       |      |     |       |       |     |     |      |      |      |       |     |
@@ -50,15 +52,15 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 |       |      |     |       |       |     |     | Ins  | Pgup | Up   | Pgdn  |     |
 | Shift | Alt  | Tab | Ctrl  | Enter |     |     | Home | Left | Down | Right | End |
 | Undo  | Copy | Cut | Paste | Redo  |     |     |      |      |      |       |     |
-|       |      |     |       |       |     |     | Bspc | Spc  | Del  |       |     |
+|       |      |     |       |       |     |     |      |      |      |       |     |
 
 #### Macros Layer
-|     |     |     |     |     |     |     |      |     |     |     |     |
-| --- | --- | --- | --- | --- | --- | --- | ---- | --- | --- | --- | --- |
-|     |     |     |     |     |     |     |      |     |     |     |     |
-|     |     |     |     |     |     |     |      |     |     |     |     |
-|     |     |     |     |     |     |     |      |     |     |     |     |
-|     | Esc | Tab | R   | Ent |     |     | Bspc | Spc | Del |     |     |
+|         |     |     |     |     |     |     |     |     |     |     |     |
+| ------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| git all |     |     |     |     |     |     |     |     |     |     |     |
+|         |     |     |     |     |     |     |     |     |     |     |     |
+|         |     |     |     |     |     |     |     |     |     |     |     |
+|         |     |     |     |     |     |     |     |     |     |     |     |
 
 #### Function Layer
 |     |     |     |     |     |     |     |     |     |         |         |     |
@@ -93,12 +95,12 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 | Gui   | Ctrl | Alt | Space | Enter |     |     | BSP | SPC | DEL | Ctrl | Alt   |
 
 #### League Layer
-|       |     |     |     |      |     |     |       |     |     |     |     |
-| ----- | --- | --- | --- | ---- | --- | --- | ----- | --- | --- | --- | --- |
-| 1     | 2   | 3   | 4   | 5    | T   | U   |       |     |     |     |     |
-| Q     | W   | E   | R   | Alt  | B   | Rec | Enter | Esc |     |     |     |
-| 6     | D   | F   | F13 | Ctrl | U   | F12 |       |     |     |     |     |
-| Shift | Esc | TAB | SPC | Chat |     |     |       |     |     |     |     |
+|       |     |     |       |      |     |     |       |     |     |     |     |
+| ----- | --- | --- | ----- | ---- | --- | --- | ----- | --- | --- | --- | --- |
+| 1     | 2   | 3   | 4     | 5    | T   | U   |       |     |     |     |     |
+| Q     | W   | E   | R     | Alt  | B   | Rec | Enter | Esc |     |     |     |
+| 6     | D   | F   | F13   | Ctrl | U   | F12 |       |     |     |     |     |
+| Shift | Esc | Tab | Space | Chat |     |     |       |     |     |     |     |
 
 
 #### Chat Layer
@@ -112,6 +114,65 @@ Same as [[#Default Layer]], but enter switches back to [[#League Layer]].
 |     |     |     |       |     |     |     |      |     |     |     |     |
 |     | Esc | Tab | Space | Ent |     |     | Bspc | Spc | Del |     |     |
 
+| Functionality                    | Ableton | Bitwig |
+| -------------------------------- | ------- | ------ |
+| show/hide                        | 0       |        |
+| toggle sends                     |         |        |
+| toggle return channels           |         |        |
+| toggle mixer                     |         |        |
+| toggle clip review               |         |        |
+| toggle track io                  |         |        |
+| toggle device panel              |         |        |
+| toggle inspector                 |         |        |
+| toggle browser                   |         |        |
+| toggle project panel             |         |        |
+| toggle output monitoring         |         |        |
+| automation view                  |         |        |
+| device view                      |         |        |
+| clip editor                      |         |        |
+| maximized edit view              |         |        |
+| expanded device view             |         |        |
+| device tooltip view              |         |        |
+| double content (half?)           |         |        |
+| scale 50%                        |         |        |
+| scale 200%                       |         |        |
+| scale each 50%                   |         |        |
+| scale each 200%                  |         |        |
+| make legato                      |         |        |
+| gain 1db                         |         |        |
+| gain 6db                         |         |        |
+| tranpose semitone up             |         |        |
+| transpose semitone down          |         |        |
+| transpose octave up              |         |        |
+| transpose octave down            |         |        |
+| zoom to fit selection or all     |         |        |
+| smaller grid grid                |         |        |
+| larger beat grid                 |         |        |
+| next beat subdivision            |         |        |
+| toggle snap                      |         |        |
+| toggle adaptive beat grid        |         |        |
+| duplicate time                   |         |        |
+| delete time                      |         |        |
+| insert silence                   |         |        |
+| jump to beginning of next bar    |         |        |
+| jump to beginnig of previous bar |         |        |
+| jump forward 8 bars              |         |        |
+| jump backward 8 bars             |         |        |
+| insert que marker                |         |        |
+| jump to next que marker          |         |        |
+| jump to last que marker          |         |        |
+| fold/unfold all group tracks     |         |        |
+| enter group                      |         |        |
+| exit group                       |         |        |
+| add scene from playing clips     |         |        |
+| global arm off                   |         |        |
+| global mute off                  |         |        |
+| select previous project          |         |        |
+| show item help                   |         |        |
+| slice in place                   |         |        |
+| slice to drum machine            |         |        |
+| slice to multisample             |         |        |
+|                                  |         |        |
 
 ## Unicodes
 | Char | Keycode | Value  |
