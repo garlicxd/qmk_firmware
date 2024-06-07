@@ -1,6 +1,9 @@
 ---
 cssclasses:
   - github-markdown
+  - keyboard-table
+aliases:
+  - CSTC40 Keyboard
 ---
 
 ## [monkeytype](https://monkeytype.com/)
@@ -21,22 +24,22 @@ Keycaps: XDA
 #### Default Layer
 SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 
-|     |          |          |          |          |      |      |           |        |          |     |     |
-| --- | -------- | -------- | -------- | -------- | ---- | ---- | --------- | ------ | -------- | --- | --- |
-| X   | P        | D        | M        | Q        | qwer | leag | &         | Y      | O        | U   | '   |
-| S   | N        | T        | H        | V        | dj   |      | G         | C      | A        | E   | I   |
-| F   | B        | K        | L        | J        |      |      | Z         | W      | "        | .   | ,   |
-|     | Esc func | Tab macr | Spc navi | Ent caps |      |      | Bspc spec | R symb | Del mous | Gui |     |
+|     |          |          |          |          |      |      |        |        |        |     |     |
+| --- | -------- | -------- | -------- | -------- | ---- | ---- | ------ | ------ | ------ | --- | --- |
+| Bsp | u        | o        | y        | -        | qwer | leag | q      | m      | d      | p   | x   |
+| i   | e        | a        | c        | g        | dj   |      | v      | h      | t      | n   | s   |
+| Del | =        | "        | w        | z        |      |      | j      | l      | k      | b   | f   |
+| Esc | Gui func | Tab macr | Spc navi | Ent spec |      |      | . caps | r symb | , mous |     |     |
 
 #### Default Caps Layer
-|     |     |     |     |     |     |     |     |     |     |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| X   | P   | D   | M   | Q   |     |     | $   | Y   | O   | U   | \`  |
-| S   | N   | T   | H   | V   |     |     | G   | C   | A   | E   | I   |
-| F   | B   | K   | L   | J   |     |     | Z   | W   | #   | @   | ~   |
-|     |     |     |     |     |     |     | -   | R   | _   |     |     |
+|     |     |     |          |         |      |      |     |     |     |     |     |
+| --- | --- | --- | -------- | ------- | ---- | ---- | --- | --- | --- | --- | --- |
+| Bsp | u   | o   | y        | #       | qwer | leag | q   | m   | d   | p   | x   |
+| i   | e   | a   | c        | g       | dj   |      | v   | h   | t   | n   | s   |
+| Del | @   | '   | w        | z       |      |      | j   | l   | k   | b   | f   |
+|     |     | \`  | Spc navi | _ cspec |      |      |     |     |     |     |     |
 
-     
+
 
 #### Symbols Layer
 |     |     |     |     |     |     |     |     |     |     |     |     |
@@ -44,7 +47,7 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 | 1   | 2   | 3   | 4   | %   |     |     | ^   | 6   | 7   | 8   | 9   |
 | <   | [   | {   | (   | 5   |     |     | 0   | ;   | :   | !   | ?   |
 | +   | -   | *   | /   | \\  |     |     | \|  | )   | }   | ]   | >   |
-|     |     |     |     |     |     |     | ,   | =   | .   |     |     |
+|     |     | &   |     | ~   |     |     |     |     |     |     |     |
 
 #### Nav Layer
 |       |      |     |       |       |     |     |      |      |      |       |     |
@@ -73,17 +76,17 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 #### Special Layer
 |     |     |     |     |     |     |     |     |     |     |     |     |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     |     |     |     |     |     |     | ő   | ö   | ó   | ø   | ß   |
-|     |     |     |     |     |     |     | å   | ä   | á   | é   | í   |
-|     |     |     |     |     |     |     | ű   | ü   | ú   |     |     |
+| ß   | ø   | ó   | ö   | ő   |     |     |     |     |     |     |     |
+| í   | é   | á   | ä   | å   |     |     |     |     |     |     |     |
+|     |     | ú   | ü   | ű   |     |     |     |     |     |     |     |
 |     |     |     |     |     |     |     |     |     |     |     |     |
 
 #### Special Caps Layer
 |     |     |     |     |     |     |     |     |     |     |     |     |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     |     |     |     |     |     |     | Ő   | Ö   | Ó   | Ø   | ẞ   |
-|     |     |     |     |     |     |     | Å   | Ä   | Á   | É   | Í   |
-|     |     |     |     |     |     |     | Ű   | Ü   | Ú   |     |     |
+| ẞ   | Ø   | Ó   | Ö   | Ő   |     |     |     |     |     |     |     |
+| Í   | É   | Á   | Ä   | Å   |     |     |     |     |     |     |     |
+|     |     | Ú   | Ü   | Ű   |     |     |     |     |     |     |     |
 |     |     |     |     |     |     |     |     |     |     |     |     |
 
 #### QWERTY Layer
@@ -172,6 +175,8 @@ Same as [[#Default Layer]], but enter switches back to [[#League Layer]].
 | slice in place                   |         |        |
 | slice to drum machine            |         |        |
 | slice to multisample             |         |        |
+| consolidate                      |         |        |
+| bounce in place                  |         |        |
 |                                  |         |        |
 
 ## Unicodes
