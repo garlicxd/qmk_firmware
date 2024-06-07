@@ -52,15 +52,15 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 |       |      |     |       |       |     |     | Ins  | Pgup | Up   | Pgdn  |     |
 | Shift | Alt  | Tab | Ctrl  | Enter |     |     | Home | Left | Down | Right | End |
 | Undo  | Copy | Cut | Paste | Redo  |     |     |      |      |      |       |     |
-|       |      |     |       |       |     |     | Bspc | Spc  | Del  |       |     |
+|       |      |     |       |       |     |     |      |      |      |       |     |
 
 #### Macros Layer
-|         |     |     |     |     |     |     |      |     |     |     |     |
-| ------- | --- | --- | --- | --- | --- | --- | ---- | --- | --- | --- | --- |
-| git all |     |     |     |     |     |     |      |     |     |     |     |
-|         |     |     |     |     |     |     |      |     |     |     |     |
-|         |     |     |     |     |     |     |      |     |     |     |     |
-|         | Esc | Tab | R   | Ent |     |     | Bspc | Spc | Del |     |     |
+|         |     |     |     |     |     |     |     |     |     |     |     |
+| ------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| git all |     |     |     |     |     |     |     |     |     |     |     |
+|         |     |     |     |     |     |     |     |     |     |     |     |
+|         |     |     |     |     |     |     |     |     |     |     |     |
+|         |     |     |     |     |     |     |     |     |     |     |     |
 
 #### Function Layer
 |     |     |     |     |     |     |     |     |     |         |         |     |
@@ -95,12 +95,12 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 | Gui   | Ctrl | Alt | Space | Enter |     |     | BSP | SPC | DEL | Ctrl | Alt   |
 
 #### League Layer
-|       |     |     |     |      |     |     |       |     |     |     |     |
-| ----- | --- | --- | --- | ---- | --- | --- | ----- | --- | --- | --- | --- |
-| 1     | 2   | 3   | 4   | 5    | T   | U   |       |     |     |     |     |
-| Q     | W   | E   | R   | Alt  | B   | Rec | Enter | Esc |     |     |     |
-| 6     | D   | F   | F13 | Ctrl | U   | F12 |       |     |     |     |     |
-| Shift | Esc | TAB | SPC | Chat |     |     |       |     |     |     |     |
+|       |     |     |       |      |     |     |       |     |     |     |     |
+| ----- | --- | --- | ----- | ---- | --- | --- | ----- | --- | --- | --- | --- |
+| 1     | 2   | 3   | 4     | 5    | T   | U   |       |     |     |     |     |
+| Q     | W   | E   | R     | Alt  | B   | Rec | Enter | Esc |     |     |     |
+| 6     | D   | F   | F13   | Ctrl | U   | F12 |       |     |     |     |     |
+| Shift | Esc | Tab | Space | Chat |     |     |       |     |     |     |     |
 
 
 #### Chat Layer
@@ -145,7 +145,7 @@ Same as [[#Default Layer]], but enter switches back to [[#League Layer]].
 | transpose semitone down          |         |        |
 | transpose octave up              |         |        |
 | transpose octave down            |         |        |
-| zoom to fit selection            |         |        |
+| zoom to fit selection or all     |         |        |
 | smaller grid grid                |         |        |
 | larger beat grid                 |         |        |
 | next beat subdivision            |         |        |
@@ -169,6 +169,10 @@ Same as [[#Default Layer]], but enter switches back to [[#League Layer]].
 | global mute off                  |         |        |
 | select previous project          |         |        |
 | show item help                   |         |        |
+| slice in place                   |         |        |
+| slice to drum machine            |         |        |
+| slice to multisample             |         |        |
+|                                  |         |        |
 
 ## Unicodes
 | Char | Keycode | Value  |
