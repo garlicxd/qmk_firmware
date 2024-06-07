@@ -23,13 +23,10 @@ enum custom_layers {
 };
 enum custom_keycodes {
     LLOCK = SAFE_RANGE,
-    CHAT,
-    ACHAT,
-    ENTnLEA,
-    PING,
     KCP_CHT,
     ENT_CHT,
     BYE_CHT,
+    GIT_ALL,
 };
 
 // unicode
@@ -128,16 +125,16 @@ const uint32_t PROGMEM unicode_map[] = {
 // default layer keys
 #define T_0 KC_ESC
 #define T_1 KC_TAB
-#define T_2 KC_R
+#define T_2 KC_SPC
 #define T_3 KC_ENT
 #define T_4 KC_BSPC
-#define T_5 KC_SPC
+#define T_5 KC_R
 #define T_6 KC_DEL
 #define LT_0 LT(_FUNCTION,      T_0)
 #define LT_1 LT(_MACROS,        T_1)
 #define LT_2 LT(_NAVIGATION,    T_2)
-#define LT_3 LT(_SPECIAL,       T_3)
-#define LT_4 LT(_DEFAULT_CAPS,  T_4)
+#define LT_3 LT(_DEFAULT_CAPS,  T_3)
+#define LT_4 LT(_SPECIAL,       T_4)
 #define LT_5 LT(_SYMBOLS,       T_5)
 #define LT_6 LT(_MOUSE,         T_6)
 
@@ -165,11 +162,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (!process_layer_lock(keycode, record, LLOCK)) { return false; }
 
     switch (keycode) {
-        case ENT_CHT:
+        case GIT_ALL:
             if (record->event.pressed) {
-                tap_code(KC_ENT);
-                last_chatter = KC_ENT;
-                layer_invert(_CHAT);
+                SEND_STRING("git add .\ngit commit -a -m \"commit\"\ngit push");
             }
             return false;
 
@@ -186,22 +181,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 tap_code(last_chatter);
                 layer_invert(_CHAT);
             }
-            return false;    
+            return false;  
 
-
-        case CHAT:
+        case ENT_CHT:
             if (record->event.pressed) {
                 tap_code(KC_ENT);
-                layer_move(_CHAT);
+                last_chatter = KC_ENT;
+                layer_invert(_CHAT);
             }
-            return false; // Skip all further processing of this key
-
-        case ENTnLEA:
-            if (record->event.pressed) {
-                tap_code(KC_ENT);
-                layer_move(_LEAGUE);
-            }
-            return false; // Skip all further processing of this key  
+            return false;  
     }
 
     return true;
@@ -237,7 +225,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     S(KC_F),S(KC_B),S(KC_K),S(KC_L),S(KC_J),_______,_______,S(KC_Z),S(KC_W),KC_HASH,KC_AT, KC_TILD,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,KC_UNDS,S(KC_R),KC_MINS,     LLOCK,     _______,_______,_______,_______,_______
+    _______,_______,_______,_______,_______,     LLOCK,     KC_MINS,S(KC_R),KC_UNDS,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
@@ -267,7 +255,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_MACROS] = LAYOUT_planck_mit(
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,
+    GIT_ALL,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
