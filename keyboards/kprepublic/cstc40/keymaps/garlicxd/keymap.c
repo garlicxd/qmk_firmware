@@ -133,8 +133,8 @@ const uint32_t PROGMEM unicode_map[] = {
 #define LT_0 LT(_FUNCTION,      T_0)
 #define LT_1 LT(_MACROS,        T_1)
 #define LT_2 LT(_NAVIGATION,    T_2)
-#define LT_3 LT(_SPECIAL,       T_3)
-#define LT_4 LT(_DEFAULT_CAPS,  T_4)
+#define LT_3 LT(_DEFAULT_CAPS,  T_3)
+#define LT_4 LT(_SPECIAL,       T_4)
 #define LT_5 LT(_SYMBOLS,       T_5)
 #define LT_6 LT(_MOUSE,         T_6)
 
