@@ -29,7 +29,7 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 | Bsp | u        | o        | y        | -        | qwer | leag | q      | m      | d      | p   | x   |
 | i   | e        | a        | c        | g        | dj   |      | v      | h      | t      | n   | s   |
 | Del | =        | "        | w        | z        |      |      | j      | l      | k      | b   | f   |
-| Esc | Gui func | Tab macr | Spc navi | Ent spec |      |      | . caps | r symb | , mous |     |     |
+| Esc | Gui func | Tab macr | Spc navi | Ent caps |      |      | . spec | r symb | , mous |     |     |
 
 #### Default Caps Layer
 |     |     |     |          |         |      |      |     |     |     |     |     |
@@ -38,8 +38,6 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 | i   | e   | a   | c        | g       | dj   |      | v   | h   | t   | n   | s   |
 | Del | @   | '   | w        | z       |      |      | j   | l   | k   | b   | f   |
 |     |     | \`  | Spc navi | _ cspec |      |      |     |     |     |     |     |
-
-
 
 #### Symbols Layer
 |     |     |     |     |     |     |     |     |     |     |     |     |
