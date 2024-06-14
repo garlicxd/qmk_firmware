@@ -32,12 +32,12 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 | Esc | Gui func | Tab macr | Spc navi | Ent caps |      |      | , spec | r symb | . mous |     |     |
 
 #### Default Caps Layer
-|     |     |     |          |       |      |      |     |     |     |     |     |
-| --- | --- | --- | -------- | ----- | ---- | ---- | --- | --- | --- | --- | --- |
-| Bsp | u   | o   | y        | \`    | qwer | leag | q   | m   | d   | p   | x   |
-| i   | e   | a   | c        | g     | dj   |      | v   | h   | t   | n   | s   |
-| Del | @   | #   | w        | z     |      |      | j   | l   | k   | b   | f   |
-|     |     |     | Spc navi | cspec |      |      | '   | r   | _   |     |     |
+|     |     |     |     |     |      |      |     |     |     |     |     |
+| --- | --- | --- | --- | --- | ---- | ---- | --- | --- | --- | --- | --- |
+| Bsp | u   | o   | y   | \`  | qwer | leag | q   | m   | d   | p   | x   |
+| i   | e   | a   | c   | g   | dj   |      | v   | h   | t   | n   | s   |
+| Del | @   | #   | w   | z   |      |      | j   | l   | k   | b   | f   |
+|     |     |     |     |     |      |      | '   | r   | _   |     |     |
 
 #### Symbols Layer
 |     |     |     |     |     |     |     |     |     |     |     |     |
