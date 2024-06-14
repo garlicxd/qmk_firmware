@@ -26,9 +26,9 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 
 |     |          |          |          |          |      |      |        |        |        |     |     |
 | --- | -------- | -------- | -------- | -------- | ---- | ---- | ------ | ------ | ------ | --- | --- |
-| Bsp | u        | o        | y        | -        | qwer | leag | q      | m      | d      | p   | x   |
+| Del | u        | o        | y        | -        | qwer | leag | q      | m      | d      | p   | x   |
 | i   | e        | a        | c        | g        | dj   |      | v      | h      | t      | n   | s   |
-| Del | =        | "        | w        | z        |      |      | j      | l      | k      | b   | f   |
+| Bsp | =        | "        | w        | z        |      |      | j      | l      | k      | b   | f   |
 | Esc | Gui func | Tab macr | Spc navi | Ent caps |      |      | , spec | r symb | . mous |     |     |
 
 #### Default Caps Layer
