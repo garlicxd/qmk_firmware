@@ -26,18 +26,18 @@ SNTH https://www.reddit.com/r/KeyboardLayouts/comments/18jefux/snth/
 
 |     |          |          |          |          |      |      |        |        |        |     |     |
 | --- | -------- | -------- | -------- | -------- | ---- | ---- | ------ | ------ | ------ | --- | --- |
-| Bsp | u        | o        | y        | -        | qwer | leag | q      | m      | d      | p   | x   |
+| Del | u        | o        | y        | -        | qwer | leag | q      | m      | d      | p   | x   |
 | i   | e        | a        | c        | g        | dj   |      | v      | h      | t      | n   | s   |
-| Del | =        | "        | w        | z        |      |      | j      | l      | k      | b   | f   |
-| Esc | Gui func | Tab macr | Spc navi | Ent caps |      |      | . spec | r symb | , mous |     |     |
+| Bsp | =        | "        | w        | z        |      |      | j      | l      | k      | b   | f   |
+| Esc | Gui func | Tab macr | Spc navi | Ent caps |      |      | , spec | r symb | . mous |     |     |
 
 #### Default Caps Layer
-|     |     |     |          |         |      |      |     |     |     |     |     |
-| --- | --- | --- | -------- | ------- | ---- | ---- | --- | --- | --- | --- | --- |
-| Bsp | u   | o   | y        | #       | qwer | leag | q   | m   | d   | p   | x   |
-| i   | e   | a   | c        | g       | dj   |      | v   | h   | t   | n   | s   |
-| Del | @   | '   | w        | z       |      |      | j   | l   | k   | b   | f   |
-|     |     | \`  | Spc navi | _ cspec |      |      |     |     |     |     |     |
+|     |     |     |     |     |      |      |     |     |     |     |     |
+| --- | --- | --- | --- | --- | ---- | ---- | --- | --- | --- | --- | --- |
+| Bsp | u   | o   | y   | \`  | qwer | leag | q   | m   | d   | p   | x   |
+| i   | e   | a   | c   | g   | dj   |      | v   | h   | t   | n   | s   |
+| Del | @   | #   | w   | z   |      |      | j   | l   | k   | b   | f   |
+|     |     |     |     |     |      |      | '   | r   | _   |     |     |
 
 #### Symbols Layer
 |     |     |     |     |     |     |     |     |     |     |     |     |
@@ -115,6 +115,62 @@ Same as [[#Default Layer]], but enter switches back to [[#League Layer]].
 |     |     |     |       |     |     |     |      |     |     |     |     |
 |     | Esc | Tab | Space | Ent |     |     | Bspc | Spc | Del |     |     |
 
+
+| Functionality                    | Ableton Live                                                           | Bitwig                                                                     |
+|:-------------------------------- |:---------------------------------------------------------------------- |:-------------------------------------------------------------------------- |
+| show/hide                        | `0`                                                                    | **`O`** (Arranger) / **`L`** (Clip Launcher) / **`Alt/Opt + B`** (Browser) |
+| toggle sends                     | `S`                                                                    | **`S`**                                                                    |
+| toggle return channels           | `Tab`                                                                  | **`Tab`**                                                                  |
+| toggle mixer                     | `Ctrl/Cmd + Option/Alt + M`                                            | **`X`**                                                                    |
+| toggle clip review               | Right-click clip -> Loop                                               | Clip Launcher: Double-click clip name to launch in Preview Editor          |
+| toggle track io                  | Double-click Track header                                              | Double-click Track header                                                  |
+| toggle device panel              | `D`                                                                    | **`D`**                                                                    |
+| toggle inspector                 | `I`                                                                    | **`I`**                                                                    |
+| toggle browser                   | `B`                                                                    | **`B`**                                                                    |
+| toggle project panel             | `P` (browser only)                                                     | Not Applicable                                                             |
+| toggle output monitoring         | `Option/Alt + M`                                                       | **`M`** (track mute button)                                                |
+| automation view                  | `A`                                                                    | **`A`**                                                                    |
+| device view                      | `D`                                                                    | **`D`**                                                                    |
+| clip editor                      | `E`                                                                    | **`W`** (Detail Editor) / **`E`** (Automation Editor)                      |
+| maximized edit view              | `Ctrl/Cmd + Shift + E`                                                 | No direct equivalent                                                       |
+| expanded device view             | No close alternative                                                   | No direct equivalent                                                       |
+| device tooltip view              | Hover over device title (with "Auto-Hide" off)                         | Hover over device title (with "Auto-Hide" off)                             |
+| double content (half?)           | View -> Toggle Arrangement View (to double/half horizontally)          | Arrangement: Select and **`Ctrl/Cmd + D`**                                 |
+| scale 50%                        | MIDI Editor: Select notes + `Cmd + /`                                  | No direct equivalent                                                       |
+| scale 200%                       | MIDI Editor: Select notes + `Cmd + *`                                  | No direct equivalent                                                       |
+| scale each 50%                   | No close alternative                                                   | No direct equivalent                                                       |
+| scale each 200%                  | No close alternative                                                   | No direct equivalent                                                       |
+| make legato                      | MIDI Editor: Select notes + Right-click -> Legato                      | No direct equivalent                                                       |
+| gain 1db                         | No close alternative: Use Utility device for precise gain adjustments. | Use Gain device or Clip Gain function for precise adjustments.             |
+| gain 6db                         | No close alternative: Use Utility device for precise gain adjustments. | Use Gain device or Clip Gain function for precise adjustments.             |
+| transpose semitone up            | `Up Arrow`                                                             | **`Up Arrow`**                                                             |
+| transpose semitone down          | `Down Arrow`                                                           | **`Down Arrow`**                                                           |
+| transpose octave up              | `Option/Alt + Up Arrow`                                                | **`Alt/Opt + Up Arrow`**                                                   |
+| transpose octave down            | `Option/Alt + Down Arrow`                                              | **`Alt/Opt + Down Arrow`**                                                 |
+| zoom to fit selection or all     | `Z`                                                                    | **`Z`**                                                                    |
+| smaller grid grid                | `Cmd + 1`                                                              | **`,`** (smaller) / **`.`** (larger)                                       |
+| larger beat grid                 | `Cmd + 2`                                                              | **`,`** (smaller) / **`.`** (larger)                                       |
+| next beat subdivision            | `Cmd + 3`                                                              | **`Shift + -`** (previous) / **`Shift + +`** (next)                        |
+| toggle snap                      | `Cmd + 4`                                                              | **`S`** (Arrangement) / **`Shift + ,`** (Grid)                             |
+| toggle adaptive beat grid        | No close alternative                                                   | No direct equivalent                                                       |
+| duplicate time                   | `Cmd + D`                                                              | **`Ctrl/Cmd + D`**                                                         |
+| delete time                      | `Cmd + Backspace/Delete`                                               | **`Ctrl/Cmd + Backspace/Delete`**                                          |
+| insert silence                   | `Cmd + Shift + I`                                                      | Not assigned by default                                                    |
+| jump to beginning of next bar    | `Right Arrow`                                                          | **`Right Arrow`** (depends on grid settings)                               |
+| jump to beginnig of previous bar | `Left Arrow`                                                           | **`Left Arrow`** (depends on grid settings)                                |
+| jump forward 8 bars              | `Cmd + Right Arrow`                                                    | **`Ctrl/Cmd + Right Arrow`** (depends on grid settings)                    |
+| jump backward 8 bars             | `Cmd + Left Arrow`                                                     | **`Ctrl/Cmd + Left Arrow`** (depends on grid settings)                     |
+| insert que marker                | `Ctrl/Cmd + M`                                                         | **`Ctrl/Cmd + M`**                                                         |
+| jump to next que marker          | `Ctrl/Cmd + Shift + M`                                                 | Double-click cue marker                                                    |
+| jump to last que marker          | Double-click last cue marker                                           | Double-click cue marker                                                    |
+| fold/unfold all group tracks     | `Option/Alt + H`                                                       | **`Ctrl/Cmd + Alt/Opt + H`**                                               |
+| enter group                      | Double-click Group Track                                               | Double-click Group Track                                                   |
+| exit group                       | Double-click top-level track/empty arrangement                         | Double-click top-level track/empty arrangement                             |
+| add scene from playing clips     | `Ctrl/Cmd + Shift + N`                                                 | No direct equivalent                                                       |
+| global arm off                   | Session View: Click the "Arm" button                                   | Session View: Click the "Arm" button                                       |
+
+
+
 | Functionality                    | Ableton | Bitwig |
 | -------------------------------- | ------- | ------ |
 | show/hide                        | 0       |        |
@@ -142,7 +198,7 @@ Same as [[#Default Layer]], but enter switches back to [[#League Layer]].
 | make legato                      |         |        |
 | gain 1db                         |         |        |
 | gain 6db                         |         |        |
-| tranpose semitone up             |         |        |
+| transpose semitone up            |         |        |
 | transpose semitone down          |         |        |
 | transpose octave up              |         |        |
 | transpose octave down            |         |        |
@@ -175,7 +231,6 @@ Same as [[#Default Layer]], but enter switches back to [[#League Layer]].
 | slice to multisample             |         |        |
 | consolidate                      |         |        |
 | bounce in place                  |         |        |
-|                                  |         |        |
 
 ## Unicodes
 | Char | Keycode | Value  |
