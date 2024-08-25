@@ -8,10 +8,10 @@ enum custom_layers {
     _QWERTY,
     _DEFAULT_MOD,
     _LEAGUE,
-    _DJ,
-    _DJEXTRA,
-    _DJTOG,
-    _DJNAV,
+    // _DJ,
+    // _DJEXTRA,
+    // _DJTOG,
+    // _DJNAV,
     _MIDI,
 
     _CHAT,
@@ -32,9 +32,9 @@ enum custom_keycodes {
     ENT_CHT,
     BYE_CHT,
     GIT_ALL,
-    BIT_BRW,
-    BIT_MID,
-    BIT_DJL,
+    // BIT_BRW,
+    // BIT_MID,
+    // BIT_DJL,
 };
 
 // unicode
@@ -130,118 +130,62 @@ const uint32_t PROGMEM unicode_map[] = {
 #define U_CU2 UM(CUUU)
 #define U_CU3 UM(CUUUU)
 
-// dj and midi
-// #define CONSOLI C(KC_J) // Consolidate
-// #define TOOLTIP KC_F1   // Show Item Help
-// #define GAIN1DB LSA(KC_UP)      // Gain +1dB
-// #define GAIN6DB A(KC_UP)        // Gain +6dB
-// #define GAIM1DB LSA(KC_DOWN)    // Gain -1dB
-// #define GAIM6DB A(KC_DOWN)      // Gain -6dB
-// #define LOOPSEL C(KC_L)         // Loop Selected Region
-// #define TOGACTI A(KC_A)         // Toggle Active
-// #define SPLIT   C(KC_E)         // Split
-// #define COMMAND C(KC_ENT)       // Commander
-// #define TOGRECD KC_F9           // Toggle Record
-// #define SMALBGR KC_DOT          // Smaller Beat Grid
-// #define LARGBGR KC_COMM         // Larger Beat Grid
-// #define NXTBSUB A(KC_DOT)       // Next Beat Subdivision
-// #define PREBSUB A(KC_COMM)      // Previous Beat Subdivision
-// #define TRANOUP LSA(KC_MINS)    // Transpose Octave Down
-// #define TRANODN LSA(KC_PLUS)    // Transpose Octave Up
-// #define TOGCLIP KC_L            // Focus/toggle Clip Launcher
-// #define TOGADGR KC_SLSH         // Toggle Adaptive Grid
-// #define MLEGATO MEH(KC_L)       // Make Legato
-// #define DUPTIME C(S(KC_D))      // Duplicate Time
-// #define MAXEDIT S(KC_TAB)       // Toggle Maximized Editing Mode
-// #define TOGARRA KC_O            // Focus/toggle Arranger Timeline Panel
-// #define TOGINSP KC_I            // Focus/toggle Inspector
-// #define TOGMIXR KC_M            // Focus/toggle Mixer Panel
-// #define TOGAUTO KC_A            // Focus/toggle Automation Editor Panel
-// #define TOGDEVI KC_D            // Focus/toggle Device Panel
-// #define ADDSCFC C(S(KC_I))      // Add Scene From Playing Clips
-// #define INSILEN C(S(P))         // Insert Silence
-// #define CUTTIME C(S(X))         // Cut Time
-// #define CLOSE   C(KC_W)         // Close
-// #define SAVE    C(KC_S)         // Save
-// #define DUPE    C(KC_D)         // Duplicate
-// #define QUANTIZ KC_Q            // Quantize
-// #define RENAME  C(KC_R)         // Rename
-// #define JUMPTNQ _______         // Jump to Next Queue Marker
-// #define JUMPTPQ _______         // Jump to Previous Queue Marker
-// #define INQHERE _______         // Insert Queue Marker Here
-// #define SCALE2X _______         // Scale 200%
-// #define SEACH2X _______         // Scale Each 200%
-// #define SCALE05 _______         // Scale 50%
-// #define SEACH05 _______         // Scale Each 50%
-// #define TOGMIDI _______         // Toggle Computer Keyboard Note Input
-// #define DOUBLEC _______         // Double Content
-// #define ZOOMTFS _______         // Zoom to Fit Selection
-// #define TOGOUTM _______         // Focus/toggle Output Monitoring Panel 
-// #define GLOBARM _______         // Global Arm Off
-// #define SHOSEND _______         // Show Sends
-// #define TOGEXPD _______         // Toggle Expanded Device View of Selected Device
-// #define FOLDALL _______         // Fold/unfold All Group Tracks
-// #define TOGPROP _______         // Focus/toggle Project Panel
-// #define TOGOUTP _______         // Focus/toggle Output Monitoring Panel
-// #define ENTGROP _______         // Enter Group
-// #define EXTGROP _______         // Exit Group
-
-#define ADDSCFC C(S(KC_I))         // Add Scene From Playing Clips
-#define CLOSE   C(KC_W)            // Close
-#define COMMAND C(KC_ENT)          // Commander
-#define CONSOLI C(KC_J)            // Consolidate
-#define CUTTIME C(S(X))            // Cut Time
-#define DOUBLEC KC_F13             // Double Content
-#define DUPE    C(KC_D)            // Duplicate
-#define DUPTIME C(S(KC_D))         // Duplicate Time
-#define ENTGROP KC_F14             // Enter Group
-#define EXTGROP KC_F15             // Exit Group
-#define FOLDALL KC_F16             // Fold/unfold All Group Tracks
+// #define ADDSCFC C(S(KC_I))         // Add Scene From Playing Clips
+// #define CLOSE   C(KC_W)            // Close
+// #define COMMAND C(KC_ENT)          // Commander
+// #define CONSOLI C(KC_J)            // Consolidate
+// #define CUTTIME C(S(X))            // Cut Time
+// #define DOUBLEC KC_F13             // Double Content
+// #define DUPE    C(KC_D)            // Duplicate
+// #define DUPTIME C(S(KC_D))         // Duplicate Time
+// #define ENTGROP KC_F14             // Enter Group
+// #define EXTGROP KC_F15             // Exit Group
+// #define FOLDALL KC_F16             // Fold/unfold All Group Tracks
 #define GAIM1DB LSA(KC_DOWN)       // Gain -1dB
 #define GAIM6DB A(KC_DOWN)         // Gain -6dB
 #define GAIN1DB LSA(KC_UP)         // Gain +1dB
 #define GAIN6DB A(KC_UP)           // Gain +6dB
-#define GLOBARM KC_F17             // Global Arm Off
-#define INQHERE KC_F18             // Insert Queue Marker Here
-#define INSILEN C(S(KC_P))            // Insert Silence
-#define JUMPTNQ KC_F19             // Jump to Next Queue Marker
-#define JUMPTPQ KC_F20             // Jump to Previous Queue Marker
-#define LARGBGR KC_COMM            // Larger Beat Grid
-#define LOOPSEL C(KC_L)            // Loop Selected Region
-#define MAXEDIT S(KC_TAB)          // Toggle Maximized Editing Mode
-#define MLEGATO MEH(KC_L)          // Make Legato
-#define NXTBSUB A(KC_DOT)          // Next Beat Subdivision
-#define PREBSUB A(KC_COMM)         // Previous Beat Subdivision
-#define QUANTIZ KC_Q               // Quantize
-#define RENAME  C(KC_R)            // Rename
-#define SAVE    C(KC_S)            // Save
-#define SCALE05 KC_F21             // Scale 50%
-#define SCALE2X KC_F22             // Scale 200%
-#define SEACH05 KC_F23             // Scale Each 50%
-#define SEACH2X KC_F24             // Scale Each 200%
-#define SHOSEND S(KC_F13)          // Show Sends
-#define SMALBGR KC_DOT             // Smaller Beat Grid
-#define SPLIT   C(KC_E)            // Split
-#define TOGACTI A(KC_A)            // Toggle Active
-#define TOGADGR KC_SLSH            // Toggle Adaptive Grid
-#define TOGARRA KC_O               // Focus/toggle Arranger Timeline Panel
-#define TOGAUTO KC_A               // Focus/toggle Automation Editor Panel
-#define TOGBROW A(KC_B)            // Focus/toggle Browser Panel
+// #define GLOBARM KC_F17             // Global Arm Off
+// #define INQHERE KC_F18             // Insert Queue Marker Here
+// #define INSILEN C(S(KC_P))         // Insert Silence
+// #define JUMPTNQ KC_F19             // Jump to Next Queue Marker
+// #define JUMPTPQ KC_F20             // Jump to Previous Queue Marker
+// #define LARGBGR KC_COMM            // Larger Beat Grid
+// #define LOOPSEL C(KC_L)            // Loop Selected Region
+// #define MAXEDIT S(KC_TAB)          // Toggle Maximized Editing Mode
+// #define MLEGATO MEH(KC_L)          // Make Legato
+// #define NXTBSUB A(KC_DOT)          // Next Beat Subdivision
+// #define PREBSUB A(KC_COMM)         // Previous Beat Subdivision
+// #define QUANTIZ KC_Q               // Quantize
+// #define RENAME  C(KC_R)            // Rename
+// #define SAVE    C(KC_S)            // Save
+// #define SCALE05 KC_F21             // Scale 50%
+// #define SCALE2X KC_F22             // Scale 200%
+// #define SEACH05 KC_F23             // Scale Each 50%
+// #define SEACH2X KC_F24             // Scale Each 200%
+// #define SHOSEND S(KC_F13)          // Show Sends
+// #define SMALBGR KC_DOT             // Smaller Beat Grid
+// #define SPLIT   C(KC_E)            // Split
+// #define TOGACTI A(KC_A)            // Toggle Active
+// #define TOGADGR KC_SLSH            // Toggle Adaptive Grid
+// #define TOGARRA KC_O               // Focus/toggle Arranger Timeline Panel
+// #define TOGAUTO KC_A               // Focus/toggle Automation Editor Panel
+// #define TOGBROW A(KC_B)            // Focus/toggle Browser Panel
 #define TOGCLIP KC_L               // Focus/toggle Clip Launcher (This was the missing one!)
-#define TOGDEVI KC_D               // Focus/toggle Device Panel
-#define TOGEXPD S(KC_F14)          // Toggle Expanded Device View of Selected Device
-#define TOGINSP KC_I               // Focus/toggle Inspector
-#define TOGMIDI S(KC_F15)          // Toggle Computer Keyboard Note Input
-#define TOGMIXR KC_M               // Focus/toggle Mixer Panel 
+// #define TOGDEVI KC_D               // Focus/toggle Device Panel
+// #define TOGEXPD S(KC_F14)          // Toggle Expanded Device View of Selected Device
+// #define TOGINSP KC_I               // Focus/toggle Inspector
+// #define TOGMIDI S(KC_F15)          // Toggle Computer Keyboard Note Input
+// #define TOGMIXR KC_M               // Focus/toggle Mixer Panel 
 #define TOGOUTM S(KC_F16)          // Focus/toggle Output Monitoring Panel 
-#define TOGPROP S(KC_F17)          // Focus/toggle Project Panel
+// #define TOGPROP S(KC_F17)          // Focus/toggle Project Panel
 #define TOGRECD KC_F9              // Toggle Record
-#define TOGSNAP KC_S               // Toggle Snap
-#define TOGSOLO S(KC_F18)          // Toggle Track Solo
-#define TOOLTIP KC_F1              // Show Item Help
+// #define TOGSNAP KC_S               // Toggle Snap
+// #define TOGSOLO S(KC_F18)          // Toggle Track Solo
+// #define TOOLTIP KC_F1              // Show Item Help
 #define TRANODN LSA(KC_PLUS)       // Transpose Octave Up
 #define TRANOUP LSA(KC_MINS)       // Transpose Octave Down
-#define ZOOMTFS S(KC_F19)          // Zoom to Fit Selection
+// #define ZOOMTFS S(KC_F19)          // Zoom to Fit Selection
 
 // default layer keys
 #define T_0 KC_ESC
@@ -269,13 +213,17 @@ const uint32_t PROGMEM unicode_map[] = {
 
 #define REC KC_F13
 
-#define LT_BITE LT(_DJEXTRA, KC_TAB)
-#define LT_BITN LT(_DJNAV, KC_SPC)
-#define LT_BITT LT(_DJTOG, KC_ENT)
+// #define LT_BITE LT(_DJEXTRA, KC_TAB)
+// #define LT_BITN LT(_DJNAV, KC_SPC)
+// #define LT_BITT LT(_DJTOG, KC_ENT)
+
+#define B_SPC CTL_T(KC_SPC)
+#define B_ENT SFT_T(KC_ENT)
+#define B_TAB ALT_T(KC_TAB)
 
 #define SLOT_1 TO(_QWERTY)
 #define SLOT_2 TO(_LEAGUE)
-#define SLOT_3 TO(_DJ)
+#define SLOT_3 TO(_MIDI)
 #define SLOT_4 _______
 #define SLOT_5 TO(_DEFAULT_MOD)
 #define SLOT_6 _______
@@ -317,25 +265,25 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 
-        case BIT_BRW:
-            if (record->event.pressed) {
-                    tap_code16(TOGBROW);
-                    last_chatter = TOGBROW;
-                    layer_invert(_CHAT);
-                }
-                return false;
-        case BIT_MID:
-            if (record->event.pressed) {
-                    tap_code16(TOGMIDI);
-                    layer_move(_MIDI);
-                }
-                return false;
-        case BIT_DJL:
-            if (record->event.pressed) {
-                    tap_code16(TOGMIDI);
-                    layer_move(_DJ);
-                }
-                return false;
+        // case BIT_BRW:
+        //     if (record->event.pressed) {
+        //             tap_code16(TOGBROW);
+        //             last_chatter = TOGBROW;
+        //             layer_invert(_CHAT);
+        //         }
+        //         return false;
+        // case BIT_MID:
+        //     if (record->event.pressed) {
+        //             tap_code16(TOGMIDI);
+        //             layer_move(_MIDI);
+        //         }
+        //         return false;
+        // case BIT_DJL:
+        //     if (record->event.pressed) {
+        //             tap_code16(TOGMIDI);
+        //             layer_move(_DJ);
+        //         }
+        //         return false;
     }
 
     return true;
@@ -350,18 +298,6 @@ void matrix_scan_user(void) {
 }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-
-// [_DEFAULT] = LAYOUT_planck_mit(
-// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-//     KC_X,   KC_P,   KC_D,   KC_M,   KC_Q,   SLOT_1, SLOT_2, KC_AMPR,KC_Y,   KC_O,   KC_U,   KC_QUOT,
-// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-//     KC_S,   KC_N,   KC_T,   KC_H,   KC_V,   SLOT_3, SLOT_4, KC_G,   KC_C,   KC_A,   KC_E,   KC_I,
-// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-//     KC_F,   KC_B,   KC_K,   KC_L,   KC_J,   SLOT_5, SLOT_6, KC_Z,   KC_W,   KC_DQUO,KC_COMM, KC_DOT,
-// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+ 
-//     _______,LT_0,   LT_1,   LT_2,   LT_3,       _______,    LT_4,   LT_5,   LT_6,   KC_LGUI,_______
-// //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
-// ),
 
 [_DEFAULT] = LAYOUT_planck_mit(
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
@@ -453,7 +389,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     U_CI1,  U_CE1,  U_CA1,  U_CA2,  U_CA3,  _______,_______,_______,_______,_______,_______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,U_CU1,  U_CU2,  U_CU3,  _______,_______,_______,_______,_______,_______,_______,
+    KC_Q,   _______,U_CU1,  U_CU2,  U_CU3,  _______,_______,_______,_______,_______,_______,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,_______,_______,_______,_______,     LLOCK,     _______,_______,_______,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
@@ -507,53 +443,41 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
-[_DJ] = LAYOUT_planck_mit(
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_DEL, JUMPTPQ,INQHERE,JUMPTNQ,CONSOLI,SEACH05,SEACH2X,_______,_______,_______,_______,_______,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    ZOOMTFS,COMMAND,TOGACTI,BIT_BRW,SPLIT,  SCALE05,SCALE2X,_______,_______,_______,_______,_______,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    TOGRECD,TOGSOLO,LOOPSEL,DUPE,   TOGSNAP,GAIM6DB,GAIM1DB,GAIN1DB,GAIN6DB,TRANODN,TRANOUP,_______,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    BIT_MID,KC_ESC, LT_BITE,LT_BITN,LT_BITT,     L_DEF,     _______,_______,_______,_______,_______
-//-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
-),
+// [_DJEXTRA] = LAYOUT_planck_mit(
+// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+//     TOGADGR,_______,MLEGATO,QUANTIZ,_______,_______,_______,_______,_______,_______,_______,_______,
+// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+//     KC_1,   KC_2,   KC_3,   KC_4,   KC_5,   _______,_______,_______,_______,_______,_______,_______,
+// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+//     DUPTIME,RENAME, GLOBARM,DOUBLEC,_______,_______,_______,_______,_______,_______,_______,_______,
+// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+//     _______,_______,_______,_______,_______,     L_DEF,     _______,_______,_______,_______,_______
+// //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
+// ),
 
-[_DJEXTRA] = LAYOUT_planck_mit(
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    TOGADGR,_______,MLEGATO,QUANTIZ,_______,_______,_______,_______,_______,_______,_______,_______,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_1,   KC_2,   KC_3,   KC_4,   KC_5,   _______,_______,_______,_______,_______,_______,_______,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    DUPTIME,RENAME, GLOBARM,DOUBLEC,_______,_______,_______,_______,_______,_______,_______,_______,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,_______,     L_DEF,     _______,_______,_______,_______,_______
-//-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
-),
+// [_DJTOG] = LAYOUT_planck_mit(
+// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+//     SHOSEND,MAXEDIT,TOGARRA,TOGEXPD,TOGPROP,_______,_______,_______,_______,_______,_______,_______,
+// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+//     TOGINSP,TOGAUTO,_______,TOOLTIP,FOLDALL,_______,_______,_______,_______,_______,_______,_______,
+// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+//     TOGOUTM,TOGCLIP,TOGMIXR,TOGDEVI,_______,_______,_______,_______,_______,_______,_______,_______,
+// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+//     _______,_______,_______,_______,_______,     L_DEF,     _______,PREBSUB,_______,_______,_______
+// //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
+// ),
 
-[_DJTOG] = LAYOUT_planck_mit(
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    SHOSEND,MAXEDIT,TOGARRA,TOGEXPD,TOGPROP,_______,_______,_______,_______,_______,_______,_______,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    TOGINSP,TOGAUTO,_______,TOOLTIP,FOLDALL,_______,_______,_______,_______,_______,_______,_______,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    TOGOUTM,TOGCLIP,TOGMIXR,TOGDEVI,_______,_______,_______,_______,_______,_______,_______,_______,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,_______,     L_DEF,     _______,PREBSUB,_______,_______,_______
-//-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
-),
-
-[_DJNAV] = LAYOUT_planck_mit(
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    ADDSCFC,INSILEN,_______,ENTGROP,EXTGROP,_______,_______,_______,_______,_______,_______,_______,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_LSFT,KC_LALT,KC_TAB, KC_LCTL, KC_ENT,_______,_______,_______,_______,_______,_______,_______,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    C(KC_Z),C(KC_C),C(KC_X),C(KC_V),C(KC_Y),_______,_______,_______,_______,_______,_______,_______,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,_______,     L_DEF,     _______,_______,_______,_______,_______
-//-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
-),
+// [_DJNAV] = LAYOUT_planck_mit(
+// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+//     ADDSCFC,INSILEN,_______,ENTGROP,EXTGROP,_______,_______,_______,_______,_______,_______,_______,
+// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+//     KC_LSFT,KC_LALT,KC_TAB, KC_LCTL, KC_ENT,_______,_______,_______,_______,_______,_______,_______,
+// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+//     C(KC_Z),C(KC_C),C(KC_X),C(KC_V),C(KC_Y),_______,_______,_______,_______,_______,_______,_______,
+// //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+//     _______,_______,_______,_______,_______,     L_DEF,     _______,_______,_______,_______,_______
+// //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
+// ),
 
 [_MIDI] = LAYOUT_planck_mit(
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
@@ -563,7 +487,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     TOGOUTM,TOGCLIP,TOGRECD,_______,_______,GAIM6DB,GAIM1DB,GAIN1DB,GAIN6DB,TRANODN,TRANOUP,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    BIT_DJL,_______,_______,_______,_______,     L_DEF,     _______,_______,_______,_______,_______
+    _______,_______,_______,_______,_______,     L_DEF,     _______,_______,_______,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 

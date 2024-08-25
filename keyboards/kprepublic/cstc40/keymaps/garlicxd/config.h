@@ -2,7 +2,7 @@
 
 #pragma once
 
-#define LAYER_STATE_32BIT
+#define LAYER_STATE_16BIT
 
 // unicode
 #define UNICODE_SELECTED_MODES UNICODE_MODE_WINCOMPOSE
