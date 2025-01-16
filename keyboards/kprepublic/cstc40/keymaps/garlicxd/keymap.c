@@ -127,76 +127,59 @@ const uint32_t PROGMEM unicode_map[] = {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
-    switch (keycode) {
+    // switch (keycode) {
 
-        case L_SNAV:
-            if (record->event.pressed) {
-                register_code(KC_LGUI);  // Hold down Super key
-                layer_move(1);           // Switch to Layer 1
-            } else {
-                unregister_code(KC_LGUI); // Release Super key
-            }
-            return false;
+    //     // case GIT_ALL:
+    //     //     if (record->event.pressed) {
+    //     //         SEND_STRING("git add .\ngit commit -a -m \"commit\"\ngit push");
+    //     //     }
+    //     //     return false;
 
-        // case GIT_ALL:
-        //     if (record->event.pressed) {
-        //         SEND_STRING("git add .\ngit commit -a -m \"commit\"\ngit push");
-        //     }
-        //     return false;
+    //     // case KCP_CHT:
+    //     //     if (record->event.pressed) {
+    //     //         tap_code(KC_P);
+    //     //         last_chatter = KC_P;
+    //     //         layer_invert(_CHAT);
+    //     //     }
+    //     //     return false;
 
-        // case KCP_CHT:
-        //     if (record->event.pressed) {
-        //         tap_code(KC_P);
-        //         last_chatter = KC_P;
-        //         layer_invert(_CHAT);
-        //     }
-        //     return false;
+    //     // case BYE_CHT:
+    //     //     if (record->event.pressed) {
+    //     //         tap_code(last_chatter);
+    //     //         layer_invert(_CHAT);
+    //     //     }
+    //     //     return false;  
 
-        // case BYE_CHT:
-        //     if (record->event.pressed) {
-        //         tap_code(last_chatter);
-        //         layer_invert(_CHAT);
-        //     }
-        //     return false;  
+    //     // case ENT_CHT:
+    //     //     if (record->event.pressed) {
+    //     //         tap_code(KC_ENT);
+    //     //         last_chatter = KC_ENT;
+    //     //         layer_invert(_CHAT);
+    //     //     }
+    //     //     return false;
 
-        // case ENT_CHT:
-        //     if (record->event.pressed) {
-        //         tap_code(KC_ENT);
-        //         last_chatter = KC_ENT;
-        //         layer_invert(_CHAT);
-        //     }
-        //     return false;
-
-        // case BIT_BRW:
-        //     if (record->event.pressed) {
-        //             tap_code16(TOGBROW);
-        //             last_chatter = TOGBROW;
-        //             layer_invert(_CHAT);
-        //         }
-        //         return false;
-        // case BIT_MID:
-        //     if (record->event.pressed) {
-        //             tap_code16(TOGMIDI);
-        //             layer_move(_MIDI);
-        //         }
-        //         return false;
-        // case BIT_DJL:
-        //     if (record->event.pressed) {
-        //             tap_code16(TOGMIDI);
-        //             layer_move(_DJ);
-        //         }
-        //         return false;
-    }
+    //     // case BIT_BRW:
+    //     //     if (record->event.pressed) {
+    //     //             tap_code16(TOGBROW);
+    //     //             last_chatter = TOGBROW;
+    //     //             layer_invert(_CHAT);
+    //     //         }
+    //     //         return false;
+    //     // case BIT_MID:
+    //     //     if (record->event.pressed) {
+    //     //             tap_code16(TOGMIDI);
+    //     //             layer_move(_MIDI);
+    //     //         }
+    //     //         return false;
+    //     // case BIT_DJL:
+    //     //     if (record->event.pressed) {
+    //     //             tap_code16(TOGMIDI);
+    //     //             layer_move(_DJ);
+    //     //         }
+    //     //         return false;
+    // }
 
     return true;
-}
-
-void process_combo_event(uint16_t combo_index, bool pressed) {
-
-}
-
-void matrix_scan_user(void) {
-
 }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -205,9 +188,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_PSCR, KC_B,   KC_Y,   KC_O,   KC_U, KC_BSPC, KC_X,   KC_L,   KC_D,   KC_W,   KC_V,   KC_DEL,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-KC_TAB,GUI_T(KC_C),CTL_T(KC_I),ALT_T(KC_E),SFT_T(KC_A),KC_DOT,KC_K,SFT_T(KC_H),ALT_T(KC_T),CTL_T(KC_N),GUI_T(KC_S),KC_QUES,
+KC_QUES,ALT_T(KC_C),CTL_T(KC_I),GUI_T(KC_E),SFT_T(KC_A),KC_MINS,KC_K,SFT_T(KC_H),GUI_T(KC_T),CTL_T(KC_N),ALT_T(KC_S),KC_QUOT,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_Z,   KC_QUOT,KC_DLR, KC_MINS,KC_COMM,KC_BSLS,KC_J,   KC_M,   KC_G,   KC_P,   KC_F,   KC_Q,
+    KC_Z,   KC_COMM,KC_COLN,KC_SLSH,KC_DOT,KC_BSLS, KC_J,   KC_M,   KC_G,   KC_P,   KC_F,   KC_Q,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_LGUI,_______,_______,L_SNAV, L_TNAV,      L_CAPS,    L_SYMB, L_FUNC, _______,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
@@ -217,11 +200,11 @@ KC_TAB,GUI_T(KC_C),CTL_T(KC_I),ALT_T(KC_E),SFT_T(KC_A),KC_DOT,KC_K,SFT_T(KC_H),A
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,S(KC_B),S(KC_Y),S(KC_O),S(KC_U),KC_BSPC,S(KC_X),S(KC_L),S(KC_D),S(KC_W),S(KC_V),_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,S(KC_C),S(KC_I),S(KC_E),S(KC_A),KC_AMPR,S(KC_K),S(KC_H),S(KC_T),S(KC_N),S(KC_S),_______,
+    _______,S(KC_C),S(KC_I),S(KC_E),S(KC_A),KC_UNDS,S(KC_K),S(KC_H),S(KC_T),S(KC_N),S(KC_S),_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    S(KC_Z), KC_GRV,KC_AT,  KC_UNDS,KC_HASH,_______,S(KC_J),S(KC_M),S(KC_G),S(KC_P),S(KC_F),S(KC_Q),
+    S(KC_Z),KC_AT,  KC_AMPR,KC_GRV, KC_HASH,_______,S(KC_J),S(KC_M),S(KC_G),S(KC_P),S(KC_F),S(KC_Q),
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,_______,    _______,    _______,_______,_______,_______,_______
+    _______,_______,_______,_______,_______,    _______,    S(KC_R),_______,_______,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
@@ -229,9 +212,9 @@ KC_TAB,GUI_T(KC_C),CTL_T(KC_I),ALT_T(KC_E),SFT_T(KC_A),KC_DOT,KC_K,SFT_T(KC_H),A
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,KC_3,   KC_2,   KC_1,   KC_0,   _______,_______,KC_5,   KC_6,   KC_7,   KC_8,   _______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_EXLM,KC_COLN,KC_ASTR,KC_SLSH,KC_EQL, KC_DOT, KC_4,   KC_LT,  KC_LPRN,KC_RPRN,KC_GT,  KC_9,
+    KC_EXLM,KC_PLUS,KC_DQT, KC_DLR, KC_EQL, KC_MINS, KC_4,   KC_LT,  KC_LPRN,KC_RPRN,KC_GT,  KC_9,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_PERC,KC_DQT, KC_PLUS,KC_MINS,KC_COMM,KC_CIRC,KC_PIPE,KC_LBRC,KC_LCBR,KC_RCBR,KC_RBRC,KC_SCLN,
+    KC_PERC,KC_COMM,KC_ASTR,KC_SLSH,KC_DOT, KC_CIRC,KC_PIPE,KC_LBRC,KC_LCBR,KC_RCBR,KC_RBRC,KC_SCLN,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,_______,_______,KC_UNDS,_______,    KC_TILD,    _______,_______,_______,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
@@ -243,7 +226,7 @@ KC_TAB,GUI_T(KC_C),CTL_T(KC_I),ALT_T(KC_E),SFT_T(KC_A),KC_DOT,KC_K,SFT_T(KC_H),A
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,_______,_______,_______,_______,_______,KC_4,   KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,KC_9,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,C(KC_Z),C(KC_C),C(KC_X),C(KC_V),C(KC_Y),_______,KC_HOME,KC_PGDN,KC_PGUP,KC_END,_______,
+    _______,_______,_______,_______,_______,_______,_______,KC_HOME,KC_PGDN,KC_PGUP,KC_END,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,_______,_______,_______,_______,    _______,    _______,_______,_______,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
@@ -251,11 +234,11 @@ KC_TAB,GUI_T(KC_C),CTL_T(KC_I),ALT_T(KC_E),SFT_T(KC_A),KC_DOT,KC_K,SFT_T(KC_H),A
 
 [_SNAV] = LAYOUT_planck_mit(
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,KC_3,   KC_2,   KC_1,   KC_0,   _______,_______,KC_5,   KC_6,   KC_7,   KC_8,   _______,
+    _______,G(KC_3),G(KC_2),G(KC_1),C(KC_Z),_______,_______,KC_5,   KC_6,   KC_7,   KC_8,   _______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_LSFT,KC_LALT,KC_TAB, KC_LCTL, KC_ENT,_______,KC_4,   KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,KC_END,
+    _______,_______,_______,_______,_______,_______,KC_4,   KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,KC_9,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    C(KC_Z),C(KC_C),C(KC_X),C(KC_V),C(KC_Y),_______,_______,KC_HOME,KC_PGDN,KC_PGUP,KC_END,_______,
+    _______,C(KC_C),C(KC_X),C(KC_V),C(KC_Y),_______,_______,KC_HOME,KC_PGDN,KC_PGUP,KC_END,_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,_______,_______,_______,_______,    _______,    _______,_______,_______,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
