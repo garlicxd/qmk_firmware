@@ -10,19 +10,22 @@ enum custom_layers {
 
     _CAPS,
     _TNAV,
-    _SNAV,
     _SYMB,
     _FUNC,
 
 };
 
-// enum custom_keycodes {
-//     // LLOCK = SAFE_RANGE,
-//     // KCP_CHT,
-//     // ENT_CHT,
-//     // BYE_CHT,
-//     // GIT_ALL,
-// };
+enum custom_keycodes {
+    K_ZZ = SAFE_RANGE,
+    K_ZT,
+    K_ZB,
+
+    // LLOCK = SAFE_RANGE,
+    // KCP_CHT,
+    // ENT_CHT,
+    // BYE_CHT,
+    // GIT_ALL,
+};
 
 // unicode
 enum unicode_names {
@@ -127,6 +130,31 @@ const uint32_t PROGMEM unicode_map[] = {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
+    switch (keycode) {
+        
+        case K_ZT:
+            if (record->event.pressed) {
+                tap_code(KC_Z);  // Send the first 'z'
+                tap_code(KC_T);  // Send the second 'z'
+            }
+            return false;  // Skip further processing for this key
+        
+        case K_ZZ:
+            if (record->event.pressed) {
+                tap_code(KC_Z);  // Send the first 'z'
+                tap_code(KC_Z);  // Send the second 'z'
+            }
+            return false;  // Skip further processing for this key
+   
+        case K_ZB:
+            if (record->event.pressed) {
+                tap_code(KC_Z);  // Send the first 'z'
+                tap_code(KC_B);  // Send the second 'z'
+            }
+            return false;  // Skip further processing for this key}
+
+    }
+
     // switch (keycode) {
 
     //     // case GIT_ALL:
@@ -188,11 +216,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_PSCR, KC_B,   KC_Y,   KC_O,   KC_U, KC_BSPC, KC_X,   KC_L,   KC_D,   KC_W,   KC_V,   KC_DEL,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-KC_QUES,ALT_T(KC_C),CTL_T(KC_I),GUI_T(KC_E),SFT_T(KC_A),KC_MINS,KC_K,SFT_T(KC_H),GUI_T(KC_T),CTL_T(KC_N),ALT_T(KC_S),KC_QUOT,
+KC_QUES,KC_C,CTL_T(KC_I),ALT_T(KC_E),SFT_T(KC_A),KC_MINS,KC_K,SFT_T(KC_H),ALT_T(KC_T),CTL_T(KC_N),KC_S,KC_QUOT,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_Z,   KC_COMM,KC_COLN,KC_SLSH,KC_DOT,KC_BSLS, KC_J,   KC_M,   KC_G,   KC_P,   KC_F,   KC_Q,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_LGUI,_______,_______,L_SNAV, L_TNAV,      L_CAPS,    L_SYMB, L_FUNC, _______,_______,_______
+    KC_LGUI,_______,_______,KC_LGUI,L_TNAV,      L_CAPS,    L_SYMB, L_FUNC, _______,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
@@ -202,7 +230,7 @@ KC_QUES,ALT_T(KC_C),CTL_T(KC_I),GUI_T(KC_E),SFT_T(KC_A),KC_MINS,KC_K,SFT_T(KC_H)
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,S(KC_C),S(KC_I),S(KC_E),S(KC_A),KC_UNDS,S(KC_K),S(KC_H),S(KC_T),S(KC_N),S(KC_S),_______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    S(KC_Z),KC_AT,  KC_AMPR,KC_GRV, KC_HASH,_______,S(KC_J),S(KC_M),S(KC_G),S(KC_P),S(KC_F),S(KC_Q),
+    S(KC_Z),KC_AT,  KC_AMPR,KC_GRV, KC_HASH,KC_TAB, S(KC_J),S(KC_M),S(KC_G),S(KC_P),S(KC_F),S(KC_Q),
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,_______,_______,_______,_______,    _______,    S(KC_R),_______,_______,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
@@ -214,7 +242,7 @@ KC_QUES,ALT_T(KC_C),CTL_T(KC_I),GUI_T(KC_E),SFT_T(KC_A),KC_MINS,KC_K,SFT_T(KC_H)
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_EXLM,KC_PLUS,KC_DQT, KC_DLR, KC_EQL, KC_MINS, KC_4,   KC_LT,  KC_LPRN,KC_RPRN,KC_GT,  KC_9,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_PERC,KC_COMM,KC_ASTR,KC_SLSH,KC_DOT, KC_CIRC,KC_PIPE,KC_LBRC,KC_LCBR,KC_RCBR,KC_RBRC,KC_SCLN,
+    KC_PERC,KC_COMM,KC_ASTR,KC_SLSH,KC_DOT, KC_CIRC,KC_SCLN,KC_LBRC,KC_LCBR,KC_RCBR,KC_RBRC,KC_PIPE,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,_______,_______,KC_UNDS,_______,    KC_TILD,    _______,_______,_______,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
@@ -222,23 +250,11 @@ KC_QUES,ALT_T(KC_C),CTL_T(KC_I),GUI_T(KC_E),SFT_T(KC_A),KC_MINS,KC_K,SFT_T(KC_H)
 
 [_TNAV] = LAYOUT_planck_mit(
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,KC_3,   KC_2,   KC_1,   KC_0,   _______,_______,KC_5,   KC_6,   KC_7,   KC_8,   _______,
+    _______,KC_3,   KC_2,   KC_1,   KC_0,   K_ZT,   _______,KC_5,   KC_6,   KC_7,   KC_8,   _______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,_______,_______,KC_4,   KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,KC_9,
+    _______,_______,_______,_______,_______,K_ZZ,   KC_4,   KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,KC_9,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,_______,_______,_______,KC_HOME,KC_PGDN,KC_PGUP,KC_END,_______,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,_______,_______,_______,_______,    _______,    _______,_______,_______,_______,_______
-//-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
-),
-
-[_SNAV] = LAYOUT_planck_mit(
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,G(KC_3),G(KC_2),G(KC_1),C(KC_Z),_______,_______,KC_5,   KC_6,   KC_7,   KC_8,   _______,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    G(KC_TAB),_______,_______,_______,_______,_______,KC_4,   KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,KC_9,
-//-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    _______,C(KC_C),C(KC_X),C(KC_V),C(KC_Y),_______,_______,KC_HOME,KC_PGDN,KC_PGUP,KC_END,_______,
+    _______,C(KC_X),C(KC_P),C(KC_Y),C(KC_Z),K_ZB,   _______,KC_HOME,KC_PGDN,KC_PGUP,KC_END, _______,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,_______,_______,_______,_______,    _______,    _______,_______,_______,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
