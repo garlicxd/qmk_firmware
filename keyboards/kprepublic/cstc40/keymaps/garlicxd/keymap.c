@@ -220,7 +220,7 @@ KC_QUES,KC_C,CTL_T(KC_I),ALT_T(KC_E),SFT_T(KC_A),KC_MINS,KC_K,SFT_T(KC_H),ALT_T(
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_Z,   KC_COMM,KC_COLN,KC_SLSH,KC_DOT,KC_BSLS, KC_J,   KC_M,   KC_G,   KC_P,   KC_F,   KC_Q,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_LGUI,_______,_______,KC_LGUI,L_TNAV,      L_CAPS,    L_SYMB, L_FUNC, _______,_______,_______
+    KC_LGUI,_______,_______,KC_LGUI,L_TNAV,      L_CAPS,    L_SYMB, L_FUNC, _______,_______,TO(_QWERTY)
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
@@ -242,7 +242,7 @@ KC_QUES,KC_C,CTL_T(KC_I),ALT_T(KC_E),SFT_T(KC_A),KC_MINS,KC_K,SFT_T(KC_H),ALT_T(
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_EXLM,KC_PLUS,KC_DQT, KC_DLR, KC_EQL, KC_MINS, KC_4,   KC_LT,  KC_LPRN,KC_RPRN,KC_GT,  KC_9,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_PERC,KC_COMM,KC_ASTR,KC_SLSH,KC_DOT, KC_CIRC,KC_SCLN,KC_LBRC,KC_LCBR,KC_RCBR,KC_RBRC,KC_PIPE,
+    KC_PERC,KC_COMM,KC_ASTR,KC_SLSH,KC_DOT, KC_CIRC,KC_PIPE,KC_LBRC,KC_LCBR,KC_RCBR,KC_RBRC,KC_SCLN,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     _______,_______,_______,KC_UNDS,_______,    KC_TILD,    _______,_______,_______,_______,_______
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
@@ -274,13 +274,13 @@ KC_QUES,KC_C,CTL_T(KC_I),ALT_T(KC_E),SFT_T(KC_A),KC_MINS,KC_K,SFT_T(KC_H),ALT_T(
 
 [_QWERTY] = LAYOUT_planck_mit( // WIP
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_DEL, KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_BSPC,
+    KC_BSPC,KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_DEL,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_LCTL,KC_A,   KC_S,   KC_D,   KC_F,   KC_G,   KC_H,   KC_J,   KC_K,   KC_L,  KC_SCLN, KC_QUOT,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
     KC_BSPC,KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,KC_ENT,
 //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    KC_LGUI,KC_ESC, KC_TAB, KC_SPC, KC_LSFT,    _______,   KC_LSFT,KC_SPC, KC_LALT,KC_RCTL,KC_RALT
+    KC_LGUI,KC_ESC, KC_TAB, KC_LSFT,KC_SPC,    L_SYMB,    KC_LSFT,KC_SPC, KC_LALT,KC_RCTL,TO(_DEFAULT)
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
 
@@ -295,6 +295,7 @@ KC_QUES,KC_C,CTL_T(KC_I),ALT_T(KC_E),SFT_T(KC_A),KC_MINS,KC_K,SFT_T(KC_H),ALT_T(
     KC_LGUI,KC_ESC, KC_TAB, KC_SPC, KC_LSFT,    _______,     KC_LSFT,KC_SPC, KC_LALT,KC_RCTL,KC_RALT
 //-+-------+-------+-------+-------+-------+---------------+-------+-------+-------+-------+-------+
 ),
+
 
 // [_DEFAULT_CAPS] = LAYOUT_planck_mit(
 // //-+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
